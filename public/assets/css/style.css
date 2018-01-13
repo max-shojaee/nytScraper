@@ -1,0 +1,12 @@
+.jumbotron {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.418)), url("../images/jumbostronimage.jpg");
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 70vh; 
+}
+
+#scrape{
+    color: white;
+    background: red;
+}

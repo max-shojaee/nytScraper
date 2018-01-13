@@ -1,0 +1,29 @@
+{
+  "name": "ny-times-web-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlixAkhribi/NY-Times-Web-Scraper.git"
+  },
+  "author": "Alix Akhribi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlixAkhribi/NY-Times-Web-Scraper/issues"
+  },
+  "homepage": "https://github.com/AlixAkhribi/NY-Times-Web-Scraper#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "mongoose": "^4.13.7",
+    "request": "^2.83.0"
+  }
+}
