@@ -1,7 +1,7 @@
 {
-  "name": "ny-times-web-scraper",
+  "name": "nytscraper",
   "version": "1.0.0",
-  "description": "",
+  "description": "Heroku Deployement Page:",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,21 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlixAkhribi/NY-Times-Web-Scraper.git"
+    "url": "git+https://github.com/maxsho/nytScraper.git"
   },
-  "author": "Alix Akhribi",
+  "author": "Majid Shojaee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlixAkhribi/NY-Times-Web-Scraper/issues"
+    "url": "https://github.com/maxsho/nytScraper/issues"
   },
-  "homepage": "https://github.com/AlixAkhribi/NY-Times-Web-Scraper#readme",
+  "homepage": "https://github.com/maxsho/nytScraper#readme",
   "dependencies": {
-    "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
-    "handlebars": "^4.0.11",
-    "mongoose": "^4.13.7",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.0.1",
     "request": "^2.83.0"
   }
 }
