@@ -35,5 +35,9 @@ module.exports = {
     Note.remove({
       _id: data._id
     }, cb);
+  },
+  deleteAll: function(cb) {
+
+    Note.remove({}, cb);
   }
 };

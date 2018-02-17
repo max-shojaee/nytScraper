@@ -13,9 +13,11 @@ module.exports = {
       for (var i = 0; i < articles.length; i++) {
         articles[i].date = makeDate();
         articles[i].saved = false;
+        console.log(articles[i]);
       }
 
       Headline.collection.insertMany(articles, { ordered: false }, function(err, docs) {
+        console.log("Error is: " + err);
         cb(err, docs);
       });
     });

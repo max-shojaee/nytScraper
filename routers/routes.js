@@ -15,13 +15,13 @@ module.exports = function(router) {
  
     headlinesController.fetch(function(err, docs) {
 
-      if (!docs || docs.insertedCount === 0) {
+      //if (!docs || docs.insertedCount === 0) {
+      if (!docs) {
         res.json({
           message: "No new articles today. Check back tomorrow!"
         });
       }
       else {
-      
         res.json({
           message: "Added " + docs.insertedCount + " new articles!"
         });
@@ -72,10 +72,9 @@ module.exports = function(router) {
     });
   });
 
-  router.delete("/api/notes/:id", function(req, res) {
-    var query = { _id: req.params.id };
+  router.delete("/api/notes/all", function(req, res) {
 
-    notesController.delete(query, function(err, data) {
+      notesController.deleteAll(function(err, data) {
    
       res.json(data);
     });

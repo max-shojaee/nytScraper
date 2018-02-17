@@ -16,7 +16,7 @@ $(document).ready(function() {
         renderArticles(data);
       }
       else {
-    
+        handleNoteDeleteAll();
         renderEmpty();
       }
     });
@@ -64,11 +64,11 @@ $(document).ready(function() {
     var emptyAlert = $(
       [
         "<div class='alert alert-warning text-center'>",
-        "<h4>Looks like you don't have any saved articles.</h4>",
+        "<h4>You don't have any saved articles.</h4>",
         "</div>",
         "<div class='panel panel-default'>",
         "<div class='panel-heading text-center'>",
-        "<h3>Would You Like to Browse the Available New York Times Articles?</h3>",
+        "<h3>Would you like to browse the existing articles?</h3>",
         "</div>",
         "<div class='panel-body text-center'>",
         "<h4><a href='/'>Browse Articles</a></h4>",
@@ -140,7 +140,7 @@ $(document).ready(function() {
         "<hr />",
         "<ul class='list-group note-container'>",
         "</ul>",
-        "<textarea placeholder='New Note' rows='4' cols='60'></textarea>",
+        "<textarea placeholder='Enter your notes here ...' rows='4' cols='60'></textarea>",
         "<button class='btn btn-success save'>Save Note</button>",
         "</div>"
       ].join("");
@@ -176,6 +176,17 @@ $(document).ready(function() {
       });
     }
   }
+
+  function handleNoteDeleteAll() {
+
+    $.ajax({
+      url: "/api/notes/all",
+      method: "DELETE"
+    }).then(function() {
+      bootbox.hideAll();
+    });
+  }
+
 
   function handleNoteDelete() {
     
